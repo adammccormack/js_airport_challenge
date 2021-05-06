@@ -1,12 +1,20 @@
-describe('Airport', function() {
+'use strict';
 
-  var airport_1;
+describe('Airport', () => {
+  let airport;
+  let plane;
 
-  describe('can store planes', function() {
+  beforeEach(() => {
+    airport = new Airport();
+    plane = jasmine.createSpy('plane',['land']);
+  });
 
-    it('it uses an empty array', function() {
-      airport_1 = new Airport();
-      expect(airport_1).toEqual([]);
-    });
+  it('has no planes by default', () => {
+    expect(airport.planes()).toEqual([]);
+  });
+
+  it('can clear planes for landing', () => {
+    airport.clearedForLanding(plane);
+    expect(airport.planes()).toEqual([plane]);
   });
 });

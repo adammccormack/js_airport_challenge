@@ -1,5 +1,5 @@
 class Plane {
-  land() {
-    
-  }
-}
+    land(airport){
+      airport.permissionToLand(this)
+    };
+};
