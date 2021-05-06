@@ -1,4 +1,4 @@
-This is a Javascript version of the Ruby Airport Challenge
+This is a Javascript version of the Ruby Airport Challenge.
 
 
 User Stories:
